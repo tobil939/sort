@@ -1,0 +1,83 @@
+sSortFile = Datei die zum sortieren ansteht
+sSourceFolder = Ordner in dem sortiert wird
+sTargetFolderJoint = Ordner in den sortierte Dateien verschoeben werden
+sTargetFolder = Grundordner auf dem die Namen aufgebaut werden
+lCheck = überprüft ob die Listen X und X_map inhalt haben
+mapping
+X1_map
+X2_map
+X3_map 
+X4_map 
+X5_map
+X6_map
+
+Werte zum sortieren
+X1 
+X2 
+X3 
+X4 
+X5 
+X6
+
+Hallo grok, sei bitte ein softwareentwickler, programmiersprache ist python
+
+ok, vielen dank
+lass uns mal bitte versuchen die erste funktion zu machen.
+
+diese funktion erhält einen Dateinamen "sSortFile", einen "sSourceFolder" und einen "sTargetFolderJoint".
+sSortFile soll aus dem sSourceFolder in den sTargetFolderJoint verschoeben werden.
+wenn sTargetFolderJoint nicht existiert, soll er erstellt werden.
+Kannst du um diese funktion eine try exception machen?
+
+die nächste funktion erhält Werte aus verschiedenen listen, X1_map, X2_map, X3_map, X4_map, X5_map, X6_map, einen Pfad zu einen Ordner sTargetFolder.
+die funktion soll einen Pfad zusammen bauen und diesesn zurück geben, sTargetFolderJoint
+sTargetFolderJoint = sTargetFolder/X1_map/X2_map/X3_map/X4_map/X5_map/X6_map/
+
+kann ich eine Liste erstellen in der sechs Listen sind?
+oder viel mehr eine Liste in der die Namen der sechs Listen sind?
+
+erstelle bitte ein funktion die schaut ob inhalte in den Listen X1, X2, X3, X4, X5, X6 existiert.
+die namen der Listen mit inhalt soll in einer Liste lCheck gespeichert werden
+
+erstelle jetzt bitte eine funktion die die Xn_map Listen bearbeitet.
+Wenn nichst in den Listen Xn_map steht, soll der Wert aus der zugehörigen Xn übernommen werden.
+Hier ein Beispiel:
+X1 = ["-20Deg", "23Deg", "50Deg"]
+X1_map = ["LT", "RT", "HT"];
+X5 = ["20Nm", "30Nm"]
+X5_map = [] dann X5_map = ["20Nm", "30Nm"]
+
+erstelle nun bitte eine funktion die den inhalt von sSourceFolder durchsucht, es sollen die Dateinamen mit Dateiendungen durchsucht werden.
+nach was gesucht werden soll steht in den Listen X1 bis X6, in der funktion finde_listen_mit_inhalt wurde ja geschaut welche listen gefüllt sind,
+dieses sollen hier auch verwendet werden. 
+Angenommen die Listen X1, X4, und X5 sind gefüllt
+dann sollen nach X1[n] & X4[n] & X5[n] gesucht werden, danch nach X1[n] & X4[n] & X5[n+1] und so weiter bis alle kompinationen gesucht wurden 
+
+
+Bso, du hast jetzt fünf funktionen gemacht, baue_pfad, verschiebe_datei, finde_listen_mit_inhalt, aktualisiere_map_listen und suche_dateien.
+kannst du nun ein Hauptprogramm machen sorting_agent, mit den fünf funtkionen?
+Gegen sind sTargetFolder, sSourceFolder, und einige Inhalte von Xn und Xn_map
+suche in sSourceFolder nach den Dateien mit den Inhalten aus Xn, gefundene Dateien soll dann nach sTargetFolderJoint verschoben werden. sTargetFolderJoint wird ja aus Xn_map zusammengesetzte. bitte verwende dafür alle fünf funktionen
+
+
+X1 = ["50Deg", "23Deg", "-20Deg"]  
+x1_mapping = {
+    "50Deg": "HT",
+    "23Deg": "RT",
+    "-20Deg": "LT"
+    }  
+X3 = ["jpg", "trc", "mat"] 
+x3_mapping = {
+    "jpg": "Osci",
+    "trc": "Osci",
+    "mat": "Fups",
+}  # Mapping der X2 Werte
+X2 = ["Gen", "Motor"]
+X4 = ["Osci1", "Osci2", "Osci3", "Osci4"]
+X5 = ["100prz", "90prz", "80prz", "70prz", "60prz", "50prz"]
+X6 = []
+
+
+C3_23Deg_Gen_Osci3_80prz.jpg
+C2_-20Deg_Gen_Osci2_70prz.trc 
+AmiCRipple_Motor_50Deg_50.mat
